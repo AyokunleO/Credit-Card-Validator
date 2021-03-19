@@ -104,15 +104,13 @@ function invalidCardIssuers(incCards){
             continue;
     }
         if (invalidCIssuers.indexOf(cardIssuer) < 0){
-            invalidCIssuers.push(incCards[i]);
+            invalidCIssuers.push(cardIssuer);
         }
     }
-    return invalidCardIssuers;
+    return invalidCIssuers;
 }
 
-console.log(invalidCardIssuers(batch));
-
-// console.log(invalidCardIssuers(findInvalidCards(batch)));
+console.log(invalidCardIssuers(findInvalidCards(batch)));
 
 
 
